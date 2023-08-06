@@ -1,0 +1,123 @@
+.header {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 0;
+    border-bottom: 1px solid var(--gray);
+  }
+
+  &__caption {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: right;
+    color: #333;
+  }
+
+  &__link {
+    border-bottom: 1px solid currentColor;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: right;
+    color: #607ce6;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    align-items: flex-end;
+  }
+
+  &__bottom {
+    padding-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include tablet {
+      border-radius: 16px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 80%;
+      flex-direction: column;
+      height: auto;
+      gap: 16px;
+      background-color: var(--light-gray);
+      transform: translateX(-150%);
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #607ce6;
+    @include tablet{
+      margin-bottom: 16px;
+    }
+  }
+
+  &__img {
+    @include small-tablet {
+      width: 140px;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+
+    @include small-desktop {
+      gap: 24px;
+    }
+    @include tablet{
+      flex-direction: column;
+    }
+
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--dark);
+  }
+}
+
+.burger {
+  display: none;
+  @include tablet{
+    display: block;
+    @include burger;
+    --burger-height: 20px;
+    color: var(--dark);
+  }
+
+}
+
+.menu--active {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+}

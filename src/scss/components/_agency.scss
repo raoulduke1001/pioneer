@@ -1,0 +1,14 @@
+.agency {
+  &__map {
+    width: calc(100% - 29px);
+  }
+
+  .svg {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  @include tablet{
+    display: none;
+  }
+}

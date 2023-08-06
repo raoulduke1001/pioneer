@@ -1,0 +1,73 @@
+.footer {
+  padding-top: 56px;
+  padding-bottom: 24px;
+  background: var(--dark);
+
+  &__column {
+    grid-column: 6 span;
+
+    &--full {
+      grid-column: 12 span;
+      margin-top: 70px;
+    }
+
+    @include tablet {
+      grid-column: 5 span;
+    }
+    @include small-tablet {
+      grid-column: 4 span;
+    }
+  }
+
+  &__copy {
+    color: var(--light);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__nav {
+    display: block;
+    columns: 2;
+    max-width: 343px;
+  }
+
+  .flex {
+    display: flex;
+    gap: 56px;
+    @include small-desktop {
+      gap: 16px;
+    }
+    @include tablet {
+      grid-column: 7 span;
+    }
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    color: var(--light);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__logo {
+    @include small-tablet {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+  }
+}
